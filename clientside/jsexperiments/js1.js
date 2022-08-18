@@ -1,3 +1,6 @@
+/**
+ * basic var demo
+ */
 var msg="hello";
 
 console.log("message is "+msg);
