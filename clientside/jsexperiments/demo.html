@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script>
+        function showMessage(){
+         console.log("inside showMessage()") 
+         var newInnerHtml="<h3> Welcome to javascript </h3> "; 
+         var con= document.getElementById("container"); 
+         con.innerHTML=newInnerHtml;
+         console.log("inner html changed for container "+newInnerHtml);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Demo for making dynamic dom using dom api</h1>
+  
+
+        <button  onclick="showMessage()">Show Message</button>
+
+
+        <div id="container">
+
+
+
+        </div>
+
+
+
+</body>
+
+
+</html>
