@@ -1,5 +1,5 @@
 /*
-rest/spread operator
+spread operator
 */
 
 const emp1={
