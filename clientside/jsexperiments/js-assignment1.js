@@ -9,15 +9,15 @@ class Product {
 }
 
 class ProductService {
-    products = [];
+    productStore = [];
 
     addProduct(name, price) {
         const product = new Product(name, price);
-        this.products.push(product);
+        this.productStore.push(product);
     }
 
     findByName(name) {
-        for (const product of this.products) {
+        for (const product of this.productStore) {
             if (product.name === name) {
                 return product;
             }
@@ -26,7 +26,7 @@ class ProductService {
     }
 
     findAll() {
-        return this.products;
+        return this.productStore;
     }
 
 

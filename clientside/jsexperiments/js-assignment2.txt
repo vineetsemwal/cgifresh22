@@ -1,0 +1,43 @@
+Student{
+
+
+name
+
+age
+}
+
+
+SchoolService{
+
+
+studentStore ---array
+
+
+addStudent(name, age): Student
+
+
+findByName(name): Student
+
+
+
+}
+
+
+Frontend{
+
+
+runUI(){
+
+// add student here using service and print --add 3 students one by one
+
+
+
+// fetch student here and print details
+
+}
+
+
+
+}
+
+
