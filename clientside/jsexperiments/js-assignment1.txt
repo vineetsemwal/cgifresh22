@@ -1,0 +1,42 @@
+Product{
+
+
+name
+
+price
+}
+
+
+ProductService{
+
+
+products ---array
+
+addProduct(name, price)
+
+
+findByName(name)
+
+
+
+}
+
+
+Frontend{
+
+
+runUI(){
+
+// add product here using service and print --add 3 products one by one
+
+
+
+// fetch product here and prnt details
+
+}
+
+
+
+}
+
+
