@@ -1,5 +1,5 @@
 /**
- * for each  -- of vs in
+ * for each array -- of vs in
  */
 
 const array1=["one", "two", "three"];
