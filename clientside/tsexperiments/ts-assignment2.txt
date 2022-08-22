@@ -1,0 +1,53 @@
+Use TypeScript to do following task in layered architecture manner 
+
+Employee{
+
+name :string
+
+age: int
+
+dept: String
+
+}
+
+EmployeeDetails{
+
+name:String
+age: int
+}
+
+
+EmployeeService{
+
+
+employeeStore:Employee[]
+
+
+add(name, age): void
+
+
+findByName(name): EmployeeDetails
+
+
+
+}
+
+
+Frontend{
+
+
+runUI(){
+
+// add employees here using service and print --add 3 employees one by one
+
+
+
+// fetch emloyee details here and print details
+
+}
+
+
+
+}
+
+

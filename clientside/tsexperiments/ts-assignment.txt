@@ -1,16 +1,18 @@
+Use TypeScript to do following task in layered architecture manner 
+
 Student{
 
 
-name
+name :string
 
-age
+age: int
 }
 
 
 SchoolService{
 
 
-studentStore ---array
+studentStore:Student[]
 
 
 addStudent(name, age): Student
