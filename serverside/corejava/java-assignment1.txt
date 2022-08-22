@@ -1,0 +1,56 @@
+Write  java solution in layered architecture manner 
+
+Task{
+
+name :string
+
+priority: int
+
+description: string
+
+language: string 
+
+}
+
+TaskDetails{
+
+name:String
+priority: int
+
+}
+
+
+TaskService{
+
+
+taskStore:Task[]
+
+
+add(name, prority, desc, language): void
+
+
+findByName(name): TaskDetails
+
+
+
+}
+
+
+Frontend{
+
+
+runUI(){
+
+// add  task  using service and print --add 3 tasks one by one
+
+
+
+// fetch  task details here and print details
+
+}
+
+
+
+}
+
+
