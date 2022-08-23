@@ -12,13 +12,25 @@ import { Developer, Tester } from './employee';
 )
 
 export class AppComponent {
-  
- developer1=new Developer("taran",21, "dev", "java");
- tester1=new Tester("moksha",21,"tester","selenium");
-  constructor() {
-   
+ developers:Developer[]=[
+ new Developer("moksha",21,"dev","java"),
+ new Developer("peddireddy",22,"dev","java") 
+ ] 
 
+ tester:Tester=new Tester("pankaj",21,"tester","selenium");
+ 
+ constructor() {
+   
   }
 
+  findDeveloperNameStartingFrom(text:string):string{
+  for(const dev of this.developers){
+   const flag:boolean= dev.username.startsWith(text); 
+    if(flag){
+      return dev.username;
+     }
+  }
+   return "not found";
 
+}
 }
