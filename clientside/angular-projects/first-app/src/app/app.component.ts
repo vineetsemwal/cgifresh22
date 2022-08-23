@@ -20,7 +20,7 @@ export class AppComponent {
  tester:Tester=new Tester("pankaj",21,"tester","selenium");
  
  constructor() {
-   
+   console.log("************inside constructor AppComponent");
   }
 
   findDeveloperNameStartingFrom(text:string):string{
