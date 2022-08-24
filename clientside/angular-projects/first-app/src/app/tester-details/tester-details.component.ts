@@ -8,6 +8,7 @@ import { Tester } from '../employee';
 })
 export class TesterDetailsComponent {
 
-  tester=new Tester("aditi",21,"tester","selenium");
+ tester:Tester=new Tester("moksha",22,"tester","selenium");
+
 
 }
