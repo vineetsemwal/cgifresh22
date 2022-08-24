@@ -1,0 +1,33 @@
+1) create angular project
+
+using ng new project --skip-install (if you already have compatible node modules)
+
+
+ Customer{
+ 
+  name: string
+  
+  age: number
+  
+  
+  balance: number
+ 
+ 
+ }
+
+
+2)create two components
+
+ a) customer-details
+     will display customer details , you can keep object of customer in Component  class as field
+
+ b)list-customers
+ 
+    will display list of customers, you can keep array of customers as field in Componeny class
+  
+  
+   find Customer name with highest age --hint create function findCustomerNameWithHighestAge()
+ 
+ 
+ 
+ 
