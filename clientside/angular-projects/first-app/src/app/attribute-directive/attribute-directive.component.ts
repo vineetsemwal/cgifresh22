@@ -13,4 +13,18 @@ export class AttributeDirectiveComponent  {
    return this.age%2===0;
   }
 
+  backgroundColorStyle="green";
+  color="white";
+  fontSize="large";
+
+  demo2Style={
+     "background-color":"green",
+     "color" : "white",
+     "font-size": "large"
+  };
+
+  provideStyle(){
+  return this.demo2Style;
+  }
+
 }

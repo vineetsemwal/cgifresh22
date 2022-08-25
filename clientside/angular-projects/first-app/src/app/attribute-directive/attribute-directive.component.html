@@ -6,5 +6,30 @@
 
 
 <div [ngClass]="{'even':isAgeEven() , 'odd' : !isAgeEven(), 'box' :true }">
- Age is   {{age}}
+ using class <br>
+  Age is   {{age}}
+</div>
+
+<h3>ngStyle attribute directive first demo</h3>
+
+<div [ngStyle]="{'background-color': backgroundColorStyle , 'color': color , 'font-size': fontSize }">
+
+Using style <br>
+
+  Age is {{age}}
+
+</div>
+
+
+<h3>ngStyle directive  second demo</h3>
+
+
+<div [ngStyle]="demo2Style">
+  Age is {{age}}
+</div>
+
+<h3>ngStyle directive third demo</h3>
+
+<div [ngStyle]="provideStyle()">
+  Age is {{age}}
 </div>
