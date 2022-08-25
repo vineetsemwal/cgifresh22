@@ -7,6 +7,7 @@ import { TesterDetailsComponent } from './tester-details/tester-details.componen
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
+import { StructuralDemoComponent } from './strctural-demo/strctural-demo.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
       DeveloperDetailsComponent,
       TesterDetailsComponent,
       PropertyBindingComponent,
-      EventBindingComponent
+      EventBindingComponent,
+      StructuralDemoComponent
     ],
 
     imports: [

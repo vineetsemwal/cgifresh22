@@ -18,7 +18,7 @@ export class EventBindingComponent {
 
 changeDescription(value:string){
 this.description=value;
-console.log("inside schahe description, value="+value);
+console.log("inside method description, value="+value);
 }
 
 }
