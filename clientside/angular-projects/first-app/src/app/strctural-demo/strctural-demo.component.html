@@ -2,14 +2,36 @@
 
 <h3>*ngIf Demo</h3>
 
+<div *ngIf="isEligible(); else elsePart">You are elgible for employment</div>
 
-
-<div  *ngIf="isEligible()" >
-
-  You are elgible for employment
-
-</div>
+<ng-template #elsePart> You are not eligible using #elsePart </ng-template>
 
 <div *ngIf="!isEligible()">
-You are NOT eligible
+  You are NOT eligible with simple reverse condition
 </div>
+
+<h3>*ngFor demo</h3>
+
+<div *ngFor="let dev of devs">
+  {{ dev.username }} , {{ dev.age }}, {{ dev.language }}
+</div>
+
+<h3>Table used for displaying developers</h3>
+
+<table border="1">
+  <tr>
+    <td>username</td>
+    <td>age</td>
+    <td>language</td>
+  </tr>
+
+  <tr *ngFor="let dev of devs">
+    <td>
+      {{ dev.username }}
+    </td>
+
+    <td>{{ dev.age }}</td>
+
+    <td>{{ dev.language }}</td>
+  </tr>
+</table>
