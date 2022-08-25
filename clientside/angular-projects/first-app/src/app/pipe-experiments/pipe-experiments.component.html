@@ -1,0 +1,73 @@
+<h1>pipe-experiments</h1>
+
+Transformed {{ text | uppercase  }}
+
+<br>
+
+Original = {{text}}
+
+<br>
+
+lowercase pipe= {{"HELLO" | lowercase}}
+
+
+
+<h3>Currency pipe</h3>
+
+{{"10.95" | currency:"INR" }}
+
+<br>
+
+Date before formatting {{dateVal}}
+
+<br>
+Default argument for date pipe is medium
+<br>
+Date is {{dateVal  |date   }}
+
+<br>
+
+Date in short format
+<br>
+Date is {{dateVal | date:"short"}}
+
+<br>
+Date is {{dateVal| date:"long"}}
+
+<br>
+
+h =hour
+m=minute
+s=second
+a= AM/PM
+z=timezone
+
+Time is {{dateVal|date:"hh-mm a z"}}
+
+<br>
+<h3>JSON</h3>
+{{user|json}}
+
+
+<h3>custome length pipe</h3>
+
+length of string={{"how are you?" | length }}
+
+<br>
+
+length of phone number={{phoneNumber|length}}
+
+
+<h3>Smallest Pipe</h3>
+
+smallest number in array=  {{numbersArray|smallest}}
+
+
+<h3>Substring pipe</h3>
+
+substring from index 5 ={{"how are you?" |substring:5 }}
+<br>
+
+substring between index 3 and 8  ={{"how are you?" |substring:3:10 }}
+
+

@@ -9,6 +9,10 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
 import { StructuralDemoComponent } from './strctural-demo/strctural-demo.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { PipeExperimentsComponent } from './pipe-experiments/pipe-experiments.component';
+import { LengthPipe } from './common/length.pipe';
+import { SmallestPipe } from './common/smallest.pipe';
+import { SubstringPipe } from './common/substring.pipe';
 
 
 
@@ -21,7 +25,11 @@ import { AttributeDirectiveComponent } from './attribute-directive/attribute-dir
       PropertyBindingComponent,
       EventBindingComponent,
       StructuralDemoComponent,
-      AttributeDirectiveComponent
+      AttributeDirectiveComponent,
+      PipeExperimentsComponent,
+      LengthPipe,
+      SmallestPipe,
+      SubstringPipe
     ],
 
     imports: [
