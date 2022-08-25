@@ -8,6 +8,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
 import { StructuralDemoComponent } from './strctural-demo/strctural-demo.component';
+import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
 
 
 
@@ -19,7 +20,8 @@ import { StructuralDemoComponent } from './strctural-demo/strctural-demo.compone
       TesterDetailsComponent,
       PropertyBindingComponent,
       EventBindingComponent,
-      StructuralDemoComponent
+      StructuralDemoComponent,
+      AttributeDirectiveComponent
     ],
 
     imports: [
