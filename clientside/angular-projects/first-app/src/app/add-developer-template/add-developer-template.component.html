@@ -3,17 +3,38 @@
 <form #myform="ngForm" (ngSubmit)="addDeveloper(myform)">
   <div>
     <label>username</label>
-    <input name="username" [(ngModel)]="username" />
-  </div>
+    <input name="username" [(ngModel)]="username" required #usernameCtrl=ngModel/>
+
+
+    <div  *ngIf="isUsernameNotValid(usernameCtrl)">
+      <small class="error">username is required</small>
+    </div>
+
+</div>
 
   <div>
     <label>Age</label>
-    <input name="age" type="number"   [(ngModel)]="age" />
+    <input name="age" type="number"   [(ngModel)]="age" required  #ageCtrl=ngModel/>
+
+
+
+    <div  *ngIf="(ageCtrl.touched || ageCtrl.dirty)
+    && ageCtrl.errors!=null && ageCtrl.errors['required']">
+      <small class="error">age is required</small>
+    </div>
+
   </div>
 
   <div>
     <label>Language</label>
-    <input name="language" ngModel  [(ngModel)]="language" />
+    <input name="language" ngModel  [(ngModel)]="language" required #languageCtrl=ngModel/>
+
+    <div  *ngIf="(languageCtrl.touched || languageCtrl.dirty)
+    && languageCtrl.errors!=null && languageCtrl.errors['required']">
+      <small class="error">language is required</small>
+    </div>
+
+
   </div>
 
   <button>Add Developer</button>
