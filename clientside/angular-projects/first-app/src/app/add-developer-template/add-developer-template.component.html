@@ -1,0 +1,29 @@
+<h1>Form Handling demo-Template driven</h1>
+
+<form #myform="ngForm" (ngSubmit)="addDeveloper(myform)">
+  <div>
+    <label>username</label>
+    <input name="username" [(ngModel)]="username" />
+  </div>
+
+  <div>
+    <label>Age</label>
+    <input name="age" type="number"   [(ngModel)]="age" />
+  </div>
+
+  <div>
+    <label>Language</label>
+    <input name="language" ngModel  [(ngModel)]="language" />
+  </div>
+
+  <button>Add Developer</button>
+</form>
+
+<div *ngIf="submitted">
+  <h3>User Input</h3>
+  {{ username }}
+  <br />
+  {{ age }}
+  <br />
+  {{ language }}
+</div>

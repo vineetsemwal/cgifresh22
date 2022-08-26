@@ -13,6 +13,8 @@ import { PipeExperimentsComponent } from './pipe-experiments/pipe-experiments.co
 import { LengthPipe } from './common/length.pipe';
 import { SmallestPipe } from './common/smallest.pipe';
 import { SubstringPipe } from './common/substring.pipe';
+import { AddDeveloperTemplateComponent } from './add-developer-template/add-developer-template.component';
+import { TemplateVariableComponent } from './template-variable/template-variable.component';
 
 
 
@@ -29,7 +31,9 @@ import { SubstringPipe } from './common/substring.pipe';
       PipeExperimentsComponent,
       LengthPipe,
       SmallestPipe,
-      SubstringPipe
+      SubstringPipe,
+      AddDeveloperTemplateComponent,
+      TemplateVariableComponent
     ],
 
     imports: [
