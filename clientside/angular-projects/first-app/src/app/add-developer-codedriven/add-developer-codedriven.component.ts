@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'add-developer-codedriven',
@@ -11,36 +11,56 @@ export class AddDeveloperCodedrivenComponent {
   usernameCtrl: FormControl;
   ageCtrl: FormControl;
   languageCtrl: FormControl;
-  myform:FormGroup;
+  myform: FormGroup;
 
-  username:string|undefined;
-  age:number|undefined;
-  language:string|undefined;
-  submitted:boolean=false;
+  username: string | undefined;
+  age: number | undefined;
+  language: string | undefined;
+  submitted: boolean = false;
 
 
   constructor(builder: FormBuilder) {
-    this.usernameCtrl = builder.control('');
-    this.ageCtrl = builder.control('');
-    this.languageCtrl = builder.control('');
-    const mapObj={
-      username:this.usernameCtrl,
-      age:this.ageCtrl,
-      language:this.languageCtrl
-      };
-    this.myform=builder.group(mapObj)
+    this.usernameCtrl = builder.control('', [Validators.required]);
+    this.ageCtrl = builder.control('', [Validators.required]);
+    this.languageCtrl = builder.control('', [Validators.required]);
+    const mapObj = {
+      username: this.usernameCtrl,
+      age: this.ageCtrl,
+      language: this.languageCtrl
+    };
+    this.myform = builder.group(mapObj)
   }
 
-addDeveloper():void{
-/*
-  if(!this.myform.valid){
-  return;
-}*/
-this.username=this.usernameCtrl.value;
-this.age=this.ageCtrl.value;
-this.language=this.languageCtrl.value;
-console.log("inside addDeveloper() , username="+this.username+" , age="+this.age+","+this.language);
-this.submitted=true;
-}
+  isAgeRequiredNotValid(): boolean {
+    const flag: boolean = this.isFieldRequiredNotValid(this.ageCtrl);
+    return flag;
+  }
+
+  isUsernameRequiredNotValid(): boolean {
+    const flag = this.isFieldRequiredNotValid(this.usernameCtrl);
+    return flag;
+  }
+
+  isFieldRequiredNotValid(formCtrl: FormControl) {
+    if(!formCtrl.touched && !formCtrl.dirty ){
+      return false;
+    }
+    const flag =formCtrl.errors != null && formCtrl.errors['required'];
+    return flag;
+
+  }
+
+
+  addDeveloper(): void {
+    /*
+      if(!this.myform.valid){
+      return;
+    }*/
+    this.username = this.usernameCtrl.value;
+    this.age = this.ageCtrl.value;
+    this.language = this.languageCtrl.value;
+    console.log("inside addDeveloper() , username=" + this.username + " , age=" + this.age + "," + this.language);
+    this.submitted = true;
+  }
 
 }

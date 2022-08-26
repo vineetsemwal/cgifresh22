@@ -6,6 +6,9 @@
     <label>username</label>
     <input name="username"  formControlName="username"/>
 
+    <div  *ngIf="isUsernameRequiredNotValid()">
+      <small class="error">username is required</small>
+    </div>
 
 
 </div>
@@ -14,6 +17,9 @@
     <label>Age</label>
     <input name="age" type="number"  formControlName="age"  />
 
+    <div  *ngIf="isAgeRequiredNotValid()">
+      <small class="error">age is required</small>
+    </div>
 
 
   </div>
@@ -21,6 +27,11 @@
   <div>
     <label>Language</label>
     <input name="language" formControlName="language" />
+    <div  *ngIf="(languageCtrl.touched || languageCtrl.dirty)
+    && languageCtrl.errors!=null && languageCtrl.errors['required']">
+      <small class="error">language is required</small>
+    </div>
+
 
 
 

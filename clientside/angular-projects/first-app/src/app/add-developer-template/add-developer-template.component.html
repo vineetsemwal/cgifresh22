@@ -6,7 +6,7 @@
     <input name="username" [(ngModel)]="username" required #usernameCtrl=ngModel/>
 
 
-    <div  *ngIf="isUsernameNotValid(usernameCtrl)">
+    <div  *ngIf="isUsernameRequiredNotValid(usernameCtrl)">
       <small class="error">username is required</small>
     </div>
 
@@ -18,8 +18,7 @@
 
 
 
-    <div  *ngIf="(ageCtrl.touched || ageCtrl.dirty)
-    && ageCtrl.errors!=null && ageCtrl.errors['required']">
+    <div  *ngIf="isAgeRequiredNotValid(ageCtrl)">
       <small class="error">age is required</small>
     </div>
 

@@ -12,12 +12,24 @@ export class AddDeveloperTemplateComponent {
   language: string | undefined;
   submitted: boolean = false;
 
-  isUsernameNotValid(usernameCtrl: any): boolean {
-    const flag =
-      (usernameCtrl.touched || usernameCtrl.dirty) &&
-      usernameCtrl.errors != null &&
-      usernameCtrl.errors['required'];
+
+  isAgeRequiredNotValid(ageCtrl:any): boolean {
+    const flag: boolean = this.isFieldRequiredNotValid(ageCtrl);
     return flag;
+  }
+
+  isUsernameRequiredNotValid(nameCtrl:any): boolean {
+    const flag = this.isFieldRequiredNotValid(nameCtrl);
+    return flag;
+  }
+
+  isFieldRequiredNotValid(formCtrl: FormControl) {
+    if(!formCtrl.touched && !formCtrl.dirty ){
+      return false;
+    }
+    const flag =formCtrl.errors != null && formCtrl.errors['required'];
+    return flag;
+
   }
 
   addDeveloper(myform: any): void {
