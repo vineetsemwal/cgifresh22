@@ -1,0 +1,43 @@
+<h1>add-developer codedriven ---Reactive Forms</h1>
+
+
+<form [formGroup]="myform"     (ngSubmit)="addDeveloper()">
+  <div>
+    <label>username</label>
+    <input name="username"  formControlName="username"/>
+
+
+
+</div>
+
+  <div>
+    <label>Age</label>
+    <input name="age" type="number"  formControlName="age"  />
+
+
+
+  </div>
+
+  <div>
+    <label>Language</label>
+    <input name="language" formControlName="language" />
+
+
+
+  </div>
+
+  <button>Add Developer</button>
+
+
+</form>
+
+
+<div *ngIf="submitted">
+  <h3>User Input</h3>
+  {{ username }}
+  <br />
+  {{ age }}
+  <br />
+  {{ language }}
+</div>
+
