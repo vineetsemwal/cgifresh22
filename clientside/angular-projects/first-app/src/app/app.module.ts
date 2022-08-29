@@ -17,6 +17,7 @@ import { AddDeveloperTemplateComponent } from './add-developer-template/add-deve
 import { TemplateVariableComponent } from './template-variable/template-variable.component';
 import { AddDeveloperCodedrivenComponent } from './add-developer-codedriven/add-developer-codedriven.component';
 import { ListDevelopersComponent } from './list-developers/list-developers.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -43,7 +44,8 @@ import { ListDevelopersComponent } from './list-developers/list-developers.compo
     imports: [
       BrowserModule,
       FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      AppRoutingModule
     ],
 
     providers: [],

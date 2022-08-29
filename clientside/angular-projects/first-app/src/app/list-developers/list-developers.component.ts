@@ -14,6 +14,7 @@ export class ListDevelopersComponent  {
 
 
   constructor(service:EmployeeService) {
+    console.log("inside ctr of  ListDevelopersComponent");
   this.devs=service.fetchAllDevelopers();
 
    }
