@@ -1,6 +1,17 @@
 <h1>Developer Details</h1>
 
-<div>
+<form [formGroup]="myform"   (ngSubmit)="findDevByUsername()">
+
+ <label>Userrname</label>
+
+ <input name="username"  formControlName="username"  >
+
+  <button>Find Developer</button>
+</form>
+
+
+<div *ngIf="submitted && dev">
 
   {{dev.username}} , {{dev.age}} , {{dev.language}}
 </div>
+

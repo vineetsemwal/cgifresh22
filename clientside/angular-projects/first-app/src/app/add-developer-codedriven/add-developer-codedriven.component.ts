@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { Developer } from '../employee';
+import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'add-developer-codedriven',
@@ -13,11 +15,9 @@ export class AddDeveloperCodedrivenComponent {
   languageCtrl: FormControl;
   myform: FormGroup;
 
-  username: string | undefined;
-  age: number | undefined;
-  language: string | undefined;
   submitted: boolean = false;
-
+  developer:Developer|undefined;
+  employeeService:EmployeeService=new EmployeeService();
 
   constructor(builder: FormBuilder) {
     this.usernameCtrl = builder.control('',
@@ -30,7 +30,9 @@ export class AddDeveloperCodedrivenComponent {
       age: this.ageCtrl,
       language: this.languageCtrl
     };
-    this.myform = builder.group(mapObj)
+    this.myform = builder.group(mapObj);
+
+
   }
 
   isAgeRequiredNotValid(): boolean {
@@ -77,11 +79,15 @@ export class AddDeveloperCodedrivenComponent {
       if(!this.myform.valid){
       return;
     }*/
-    this.username = this.usernameCtrl.value;
-    this.age = this.ageCtrl.value;
-    this.language = this.languageCtrl.value;
-    console.log("inside addDeveloper() , username=" + this.username + " , age=" + this.age + "," + this.language);
+
+    const username = this.usernameCtrl.value;
+    const age = this.ageCtrl.value;
+    const language = this.languageCtrl.value;
+    this.developer=new Developer(username,age,"dev",language);
+    this.employeeService.addEmployee(this.developer);
+    console.log("inside addDeveloper() , username=" + username + " , age=" + age + "," + language);
     this.submitted = true;
+
   }
 
 }

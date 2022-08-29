@@ -51,12 +51,12 @@
 </form>
 
 
-<div *ngIf="submitted">
+<div *ngIf="submitted && developer">
   <h3>User Input</h3>
-  {{ username }}
+  {{ developer.username }}
   <br />
-  {{ age }}
+  {{ developer.age }}
   <br />
-  {{ language }}
+  {{ developer.language }}
 </div>
 
