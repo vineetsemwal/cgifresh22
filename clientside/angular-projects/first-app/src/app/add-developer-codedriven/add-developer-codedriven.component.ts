@@ -20,8 +20,10 @@ export class AddDeveloperCodedrivenComponent {
 
 
   constructor(builder: FormBuilder) {
-    this.usernameCtrl = builder.control('', [Validators.required]);
-    this.ageCtrl = builder.control('', [Validators.required]);
+    this.usernameCtrl = builder.control('',
+     [Validators.required, Validators.minLength(2), Validators.maxLength(10)]);
+    this.ageCtrl = builder.control('',
+    [Validators.required, Validators.min(18),Validators.max(60)]);
     this.languageCtrl = builder.control('', [Validators.required]);
     const mapObj = {
       username: this.usernameCtrl,
@@ -46,6 +48,25 @@ export class AddDeveloperCodedrivenComponent {
       return false;
     }
     const flag =formCtrl.errors != null && formCtrl.errors['required'];
+    return flag;
+
+  }
+
+  isUsernameLengthNotBetween(){
+    const formCtrl=this.usernameCtrl;
+    if(!formCtrl.touched && !formCtrl.dirty ){
+      return false;
+    }
+    const flag=formCtrl.errors!=null && (formCtrl.errors['minlength'] || formCtrl.errors['maxlength'])
+    return flag;
+  }
+
+  isAgeNotBetween(){
+    const formCtrl=this.ageCtrl;
+    if(!formCtrl.touched && !formCtrl.dirty ){
+      return false;
+    }
+    const flag =formCtrl.errors != null && (formCtrl.errors['min'] || formCtrl.errors['max']  );
     return flag;
 
   }

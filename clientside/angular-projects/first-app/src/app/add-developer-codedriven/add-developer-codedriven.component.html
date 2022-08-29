@@ -11,6 +11,10 @@
     </div>
 
 
+    <div *ngIf="isUsernameLengthNotBetween()">
+     <small class="error">username length not between 2 and 10</small>
+    </div>
+
 </div>
 
   <div>
@@ -19,6 +23,10 @@
 
     <div  *ngIf="isAgeRequiredNotValid()">
       <small class="error">age is required</small>
+    </div>
+
+    <div *ngIf="isAgeNotBetween()">
+      <small class="error">age is not between 18 and 60</small>
     </div>
 
 
