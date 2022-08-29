@@ -16,7 +16,7 @@ using ng new project --skip-install (if you already have compatible node modules
  }
 
 
-2)create two components
+2)create three components
 
  a) customer-details
      will display customer details , you can keep object of customer in Component  class as field
@@ -30,4 +30,11 @@ using ng new project --skip-install (if you already have compatible node modules
  
  
  
+ c)add-customer
+    will help in registering customer, use ReactiveForms(Code driven) form handling
+    Validation : required on name, age , balance
+    
+    
+    
+  
  
