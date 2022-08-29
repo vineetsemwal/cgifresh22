@@ -11,12 +11,13 @@ import { EmployeeService } from '../services/employee.service';
 export class DeveloperDetailsComponent {
 
   dev: Developer | undefined;
-  employeeService: EmployeeService = new EmployeeService();
+  employeeService: EmployeeService ;
   usernameCtrl: FormControl;
   myform: FormGroup;
   submitted:boolean=false;
 
-  constructor(builder: FormBuilder) {
+  constructor(builder: FormBuilder,service:EmployeeService) {
+    this.employeeService=service;
     this.usernameCtrl = builder.control('');
     this.myform = builder.group({
       username: this.usernameCtrl

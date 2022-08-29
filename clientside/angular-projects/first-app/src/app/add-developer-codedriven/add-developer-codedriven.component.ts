@@ -17,9 +17,10 @@ export class AddDeveloperCodedrivenComponent {
 
   submitted: boolean = false;
   developer:Developer|undefined;
-  employeeService:EmployeeService=new EmployeeService();
+  employeeService:EmployeeService;
 
-  constructor(builder: FormBuilder) {
+  constructor(builder: FormBuilder, service: EmployeeService) {
+    this.employeeService=service;
     this.usernameCtrl = builder.control('',
      [Validators.required, Validators.minLength(2), Validators.maxLength(10)]);
     this.ageCtrl = builder.control('',

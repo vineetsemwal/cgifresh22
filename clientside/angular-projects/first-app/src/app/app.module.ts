@@ -16,6 +16,7 @@ import { SubstringPipe } from './common/substring.pipe';
 import { AddDeveloperTemplateComponent } from './add-developer-template/add-developer-template.component';
 import { TemplateVariableComponent } from './template-variable/template-variable.component';
 import { AddDeveloperCodedrivenComponent } from './add-developer-codedriven/add-developer-codedriven.component';
+import { ListDevelopersComponent } from './list-developers/list-developers.component';
 
 
 
@@ -35,7 +36,8 @@ import { AddDeveloperCodedrivenComponent } from './add-developer-codedriven/add-
       SubstringPipe,
       AddDeveloperTemplateComponent,
       TemplateVariableComponent,
-      AddDeveloperCodedrivenComponent
+      AddDeveloperCodedrivenComponent,
+      ListDevelopersComponent
     ],
 
     imports: [
