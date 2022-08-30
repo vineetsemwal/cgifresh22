@@ -1,0 +1,15 @@
+.even{
+  color:green;
+  font-size: large;
+}
+
+.box{
+  width: 200px;
+  height: 100px;
+  background-color: black;
+}
+
+.odd{
+  color:red;
+  font-size: large;
+}

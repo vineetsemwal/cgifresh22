@@ -1,0 +1,18 @@
+<h1>List Developers</h1>
+
+<div *ngFor="let dev of devs">
+{{dev.id}},
+
+  {{dev.username}}
+,
+{{dev.age}}
+
+,
+  {{dev.language}}
+
+</div>
+
+
+<div *ngIf="errMsg">
+Error is {{errMsg}}
+</div>

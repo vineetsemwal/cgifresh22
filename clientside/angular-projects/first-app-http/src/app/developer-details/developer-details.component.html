@@ -1,0 +1,22 @@
+<h1>Find Developer Details</h1>
+
+<form [formGroup]="myform"   (ngSubmit)="findDevById()">
+
+ <label>Prvide Id</label>
+
+ <input name="id"  formControlName="id" type="number" >
+
+  <button>Find Developer</button>
+</form>
+
+
+<div *ngIf="submitted && dev">
+<h3>Developer found</h3>
+ {{dev.id}} , {{dev.username}} , {{dev.age}} , {{dev.language}}
+</div>
+
+<div *ngIf="errMsg">
+Error is
+  {{errMsg}}
+
+</div>

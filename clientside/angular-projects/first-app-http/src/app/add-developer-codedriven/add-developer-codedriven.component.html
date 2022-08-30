@@ -1,0 +1,67 @@
+<h1>add-developer codedriven ---Reactive Forms</h1>
+
+
+<form [formGroup]="myform"     (ngSubmit)="addDeveloper()">
+  <div>
+    <label>username</label>
+    <input name="username"  formControlName="username"/>
+
+    <div  *ngIf="isUsernameRequiredNotValid()">
+      <small class="error">username is required</small>
+    </div>
+
+
+    <div *ngIf="isUsernameLengthNotBetween()">
+     <small class="error">username length not between 2 and 10</small>
+    </div>
+
+</div>
+
+  <div>
+    <label>Age</label>
+    <input name="age" type="number"  formControlName="age"  />
+
+    <div  *ngIf="isAgeRequiredNotValid()">
+      <small class="error">age is required</small>
+    </div>
+
+    <div *ngIf="isAgeNotBetween()">
+      <small class="error">age is not between 18 and 60</small>
+    </div>
+
+
+  </div>
+
+  <div>
+    <label>Language</label>
+    <input name="language" formControlName="language" />
+    <div  *ngIf="(languageCtrl.touched || languageCtrl.dirty)
+    && languageCtrl.errors!=null && languageCtrl.errors['required']">
+      <small class="error">language is required</small>
+    </div>
+
+
+
+
+  </div>
+
+  <button>Add Developer</button>
+
+
+</form>
+
+
+<div *ngIf="submitted && developer">
+  <h3>User Input</h3>
+Id is {{developer.id}}
+<br>
+  {{ developer.username }}
+  <br />
+  {{ developer.age }}
+  <br />
+  {{ developer.language }}
+</div>
+
+<div *ngIf="errMsg">
+Error is {{errMsg}}
+</div>
