@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Developer } from '../employee';
-import { EmployeeService } from '../services/employee.service';
+import { Developer } from '../developer';
+import { EmployeeService } from '../services/developer.service';
 
 @Component({
   selector: 'list-developers',

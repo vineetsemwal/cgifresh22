@@ -1,0 +1,28 @@
+{
+  "developers": [
+    {
+      "id": 1,
+      "username": "aditi",
+      "age": 21,
+      "language": "java"
+    },
+    {
+      "id": 2,
+      "username": "pankaj",
+      "age": 22,
+      "language": "python"
+    },
+    {
+      "username": "deepika",
+      "age": 22,
+      "language": "C#",
+      "id": 3
+    },
+    {
+      "username": "peddireddy",
+      "age": 23,
+      "language": "java",
+      "id": 4
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Developer } from '../employee';
+import { Developer } from '../developer';
 
 @Component({
   selector: 'structural-demo',
@@ -11,9 +11,9 @@ export class StructuralDemoComponent  {
 age:number=80;
 devs:Developer[]=[
 
-  new Developer("taran",21,"dev", "java"),
-  new Developer("deepak",22,"dev", "c#"),
-  new Developer("pedireddy",23,"dev", "python"),
+  new Developer("taran",21, "java"),
+  new Developer("deepak",22,"c#"),
+  new Developer("pedireddy",23, "python"),
 
 
 ]

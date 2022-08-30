@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
-import { Developer } from '../employee';
-import { EmployeeService } from '../services/employee.service';
+import { Developer } from '../developer';
+import { EmployeeService } from '../services/developer.service';
 
 @Component({
   selector: 'add-developer-codedriven',
@@ -84,7 +84,7 @@ export class AddDeveloperCodedrivenComponent {
     const username = this.usernameCtrl.value;
     const age = this.ageCtrl.value;
     const language = this.languageCtrl.value;
-    this.developer=new Developer(username,age,"dev",language);
+    this.developer=new Developer(username,age,language);
     this.employeeService.addEmployee(this.developer);
     console.log("inside addDeveloper() , username=" + username + " , age=" + age + "," + language);
     this.submitted = true;

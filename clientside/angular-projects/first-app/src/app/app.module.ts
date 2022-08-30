@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DeveloperDetailsComponent } from './developer-details/developer-details.component';
-import { TesterDetailsComponent } from './tester-details/tester-details.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +25,6 @@ import { AppRoutingModule } from './app-routing.module';
     declarations: [
       AppComponent,
       DeveloperDetailsComponent,
-      TesterDetailsComponent,
       PropertyBindingComponent,
       EventBindingComponent,
       StructuralDemoComponent,
