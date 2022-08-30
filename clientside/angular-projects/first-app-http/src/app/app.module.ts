@@ -18,6 +18,7 @@ import { AddDeveloperCodedrivenComponent } from './add-developer-codedriven/add-
 import { ListDevelopersComponent } from './list-developers/list-developers.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { DeveloperDetailsRouteidComponent } from './developer-details-routeid/developer-details-routeid.component';
 
 
 
@@ -37,7 +38,8 @@ import {HttpClientModule} from '@angular/common/http';
       AddDeveloperTemplateComponent,
       TemplateVariableComponent,
       AddDeveloperCodedrivenComponent,
-      ListDevelopersComponent
+      ListDevelopersComponent,
+      DeveloperDetailsRouteidComponent
     ],
 
     imports: [

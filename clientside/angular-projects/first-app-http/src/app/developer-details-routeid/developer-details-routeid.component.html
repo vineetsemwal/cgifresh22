@@ -1,0 +1,15 @@
+<h1>developerdetails by id in route</h1>
+
+
+
+<div *ngIf="dev">
+  <h3>Developer found</h3>
+   {{dev.id}} , {{dev.username}} , {{dev.age}} , {{dev.language}}
+  </div>
+
+  <div *ngIf="errMsg">
+  Error is
+    {{errMsg}}
+
+  </div>
+

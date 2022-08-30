@@ -16,9 +16,9 @@ export class EmployeeService {
    this.client=client;
   }
 
-  addEmployee(employee:Developer): Observable<Developer>{
+  addEmployee(requestData:Developer): Observable<Developer>{
    const url=baseUrl+"/developers";
-    const observable:Observable<Developer>=this.client.post<Developer>(url,employee);
+    const observable:Observable<Developer>=this.client.post<Developer>(url,requestData);
     return observable;
   }
 
