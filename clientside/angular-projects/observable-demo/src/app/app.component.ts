@@ -16,13 +16,13 @@ export class AppComponent implements OnInit {
            next: (result:number)=>{
              console.log("add result available="+result);
            },
-           error: (error:string)=>{
-            console.log("error is available"+error);
+           error: (error:Error)=>{
+            console.log("error is available",error.message);
            }
 
     };
 
-    let observable:Observable<number> = this.add(10,1);
+    let observable:Observable<number> = this.add(10,-1);
     console.log("add operation assigned for execution");
     observable.subscribe( observer );
     console.log("after subscribe");
@@ -33,8 +33,9 @@ export class AppComponent implements OnInit {
     let observable: Observable<number> = new Observable<number>(
       subsriber => {
         if(num1<0 ||num2<0){
-          const err="num1 or num2 is negative";
-          subsriber.error(err);
+          const errMsg="num1 or num2 is negative";
+          const error=new Error(errMsg);
+          subsriber.error(error);
         }
         const result = num1 + num2;
         subsriber.next(result);
