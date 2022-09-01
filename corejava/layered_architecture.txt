@@ -1,0 +1,51 @@
+Use Java to do following task in layered architecture manner 
+
+Product{
+
+id : int
+
+name :string
+
+
+price : double
+
+}
+
+interface IProductDao{
+
+  void save(product)
+  
+  Product findById(id)
+  
+
+}
+
+
+interface IProductService{
+
+ Product add(String name, double price)
+
+ Product findById(id)
+  
+
+}
+
+
+
+Frontend{
+
+
+runUI(){
+
+// add products here using service and print --add 3 products one by one
+
+
+
+// fetch product here by id and print details
+
+}
+
+
+
+}
+
