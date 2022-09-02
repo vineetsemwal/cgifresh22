@@ -24,8 +24,12 @@ interface IEmployeeDao{
 
 interface IEmployeeService{
 
- Product add(String name, int age)
+//name should be between length 2 and 10
+// age should be between 21 and 60 
+ Product add(String name, int age) 
 
+
+// id should be positive
  Employee findById(id)
   
  List<Employee> findAll()
