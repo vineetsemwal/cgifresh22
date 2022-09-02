@@ -1,0 +1,59 @@
+Use Java to do following task in layered architecture manner , use HashMap<Integer, Product>
+
+Employee{
+
+id : int
+
+name :string
+
+
+age : int
+
+}
+
+interface IEmployeeDao{
+
+  void save(Employee employee)
+  
+  Product findById(id)
+ 
+  List<Employee>findAll()  
+
+}
+
+
+interface IEmployeeService{
+
+ Product add(String name, int age)
+
+ Employee findById(id)
+  
+ List<Employee> findAll()
+ 
+}
+
+
+
+Frontend{
+
+
+runUI(){
+
+
+// add employees here using service and print --add 3 employees one by one
+//if input is incorrect show propert error message to end user
+
+
+
+
+// fetch employee here by id and print details
+//if input is incorrect show propert error message to end user
+
+//ferch all employees and print their details
+
+}
+
+
+
+}
+

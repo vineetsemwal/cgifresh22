@@ -1,5 +1,4 @@
-Use Java to do following task in layered architecture manner 
-
+Use Java to do following task in layered architecture manner , use HashMap<Integer, Product>
 Product{
 
 id : int
