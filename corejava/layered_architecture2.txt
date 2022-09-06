@@ -1,3 +1,9 @@
+
+groupid : com.cgitraining
+artifctid : empms
+version : 1.0
+
+
 Use Java to do following task in layered architecture manner , use HashMap<Integer, Product>
 
 Employee{
