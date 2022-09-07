@@ -3,7 +3,7 @@ package com.cgitraining.couplingdemo.beans;
 import com.cgitraining.couplingdemo.beans.IShape;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Square implements IShape {
 
     private int side;
