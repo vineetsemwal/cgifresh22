@@ -14,7 +14,8 @@ public class JavaConfig {
 
   //  @Bean
     public Square square(){
-        Square square=new Square(5);
+        Square square=new Square();
+        square.setSide(5);
         return  square;
     }
 

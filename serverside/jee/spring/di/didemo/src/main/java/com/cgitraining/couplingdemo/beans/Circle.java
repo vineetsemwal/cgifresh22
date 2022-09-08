@@ -1,5 +1,8 @@
 package com.cgitraining.couplingdemo.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Circle implements IShape {
     private int radius;
 
